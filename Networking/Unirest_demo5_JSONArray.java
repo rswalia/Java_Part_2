@@ -23,7 +23,7 @@ public class Unirest_demo5_JSONArray
             // Create a JSON Parser
             JSONParser parser = new JSONParser();
             
-            // Extract JSON from String
+            // Extract JSONArray from String
             JSONArray myarray = (JSONArray) parser.parse(ans);
             
             for(int i=0; i<myarray.size(); i++)

@@ -1,11 +1,11 @@
-package GUI.Component;
+package JDBC;
 
 public class Student 
 {
-    public int rollno;
-    public String name;
-    public int marks;
-    
+    int rollno;
+    String name;
+    int marks;
+
     public Student(int rollno, String name, int marks) 
     {
         this.rollno = rollno;

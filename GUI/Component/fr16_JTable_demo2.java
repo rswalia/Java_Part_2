@@ -14,27 +14,35 @@ public class fr16_JTable_demo2 extends JFrame
     JScrollPane jsp;
     
     fr16_JTable_demo2()
-    {
-        setLayout(null);
-        
-        //gives memory to Source(ArrayList)
-        al.add(new Student(1,"abc",90));
-        al.add(new Student(2,"xyz",86));
-        al.add(new Student(3,"def",37));
-        
-        //gives memory to TableModel
-        tm = new myTableModel();
-        
-        //gives memory to JTable
-        jt = new JTable();
-        jsp = new JScrollPane(jt);
-        
-        jsp.setBounds(50,100,300,200);
-        
-        add(jsp);
+    {   
+        initComp();
+        setSize(500,500);
         
         //attach JTable with TableModel
         jt.setModel(tm);
+        
+        // refresh
+        tm.fireTableDataChanged();
+    }
+    
+    void initComp()
+    {
+        setLayout(null);
+        
+        // gives memory
+        al = new ArrayList<>();
+        tm = new myTableModel();
+        jt = new JTable();
+        jsp = new JScrollPane(jt);
+        
+        // set Bounds
+        jsp.setBounds(50,100,300,200);
+        
+        // add
+        add(jsp);
+        al.add(new Student(1,"abc",90));
+        al.add(new Student(2,"xyz",86));
+        al.add(new Student(3,"def",37));
         
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(500,500);

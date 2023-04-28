@@ -31,12 +31,8 @@ public class Unirest_demo3_JSON_Parsing
                 long rollno = (long) mainobj.get("rollno");
                 String name = (String) mainobj.get("name");
                 long marks = (long) mainobj.get("marks");
-                String photo = (String) mainobj.get("photo");
                 
-                System.out.println(rollno);
-                System.out.println(name);
-                System.out.println(marks);
-                System.out.println(photo);
+                System.out.println(rollno+" "+name+" "+marks);
             }
             else
             {

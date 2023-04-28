@@ -26,7 +26,7 @@ public class Unirest_demo6_JSONArray_inside_JSONObject
             // First Extract main object from String
             JSONObject mainobj = (JSONObject) parser.parse(ans);
             
-            // Now Extract JSONArray from main object
+            // Now Extract JSONArray from mainobj
             JSONArray myarray = (JSONArray) mainobj.get("ans");
             
             for(int i=0; i<myarray.size(); i++)

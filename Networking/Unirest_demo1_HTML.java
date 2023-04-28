@@ -9,7 +9,7 @@ public class Unirest_demo1_HTML
         try 
         {
             HttpResponse<String> res = 
-                    Unirest.get("http://www.vmmeducation.com").asString();  
+                    Unirest.get("https://www.vmmeducation.com/vmmapi/student/3").asString();  
             
             if(res.getStatus()==200) //correct url
             {

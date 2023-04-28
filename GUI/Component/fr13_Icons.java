@@ -1,5 +1,6 @@
 package GUI.Component;
 
+import java.awt.Image;
 import javax.swing.*;
 
 public class fr13_Icons extends JFrame
@@ -11,7 +12,12 @@ public class fr13_Icons extends JFrame
         initComp();
         
         bt1.setIcon(new ImageIcon("C:\\Users\\Asus\\Downloads\\icon1.png"));
-        bt2.setIcon(new ImageIcon("C:\\Users\\Asus\\Downloads\\icon2.png"));
+//        bt2.setIcon(new ImageIcon("C:\\Users\\Asus\\Downloads\\icon2.png"));
+
+        ImageIcon img = new ImageIcon("C:\\Users\\Asus\\Downloads\\icon2.png");
+        Image img1 = img.getImage().getScaledInstance(bt2.getWidth(), bt2.getHeight(), Image.SCALE_SMOOTH);
+//        ImageIcon img2 = new ImageIcon(img1);
+        bt2.setIcon(new ImageIcon(img1));
     }
     
     void initComp()
